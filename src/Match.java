@@ -13,7 +13,7 @@ public class Match {
         // Simulate the match for 90 minutes
         while (minutes < 90) {
             // Simulate an action during the match, e.g., player shooting or tackling
-            simulateAction(minutes);
+            simulateAction();
             minutes++;
         }
 
@@ -34,7 +34,7 @@ public class Match {
     }
 
     // method simulating an action during the match
-    private static void simulateAction(int minutes) {
+    private static void simulateAction() {
         /* simulate some action such as a player
         passing, shooting or tackling.  This can be random or
         based on an algorithm.
