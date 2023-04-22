@@ -1,7 +1,10 @@
 public class Main {
     public static void main(String[] args) {
+
+
+
         double count = 0;
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 1; i++) {
             Match.play();
             count++;
         }

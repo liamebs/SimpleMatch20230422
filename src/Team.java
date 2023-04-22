@@ -25,8 +25,4 @@ public class Team {
     public void scoreGoal() {
         goalsScored++;
     }
-
-
-
-
 }

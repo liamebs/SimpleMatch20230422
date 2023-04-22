@@ -1,15 +1,8 @@
 public class Match {
-    // initialise two teams playing in the match
 
+    // initialise two teams playing in the match
     static Team homeTeam = new Team("Manchester United");
     static Team awayTeam = new Team("Arsenal");
-
-    // Constructor that takes in the home and away teams
-    public Match(Team homeTeam, Team awayTeam) {
-        // initialise instance variables from parameters
-        Match.homeTeam = homeTeam;
-        Match.awayTeam = awayTeam;
-    }
 
     // method that simulates the match
     public static void play() {
