@@ -4,6 +4,8 @@ public class Match {
     static Team homeTeam = new Team("Manchester United");
     static Team awayTeam = new Team("Arsenal");
     static int minutes;
+    static int homeFouls;
+    static int awayFouls;
 
     // method that simulates the match
     public static void play() {
@@ -31,6 +33,10 @@ public class Match {
         } else {
             System.out.println("It's a draw!");
         }
+
+        // print foul count
+        System.out.println("Total fouls by " + homeTeam.getName() + ": " + homeFouls);
+        System.out.println("Total fouls by " + awayTeam.getName() + ": " + awayFouls);
     }
 
     // method simulating an action during the match
@@ -49,6 +55,10 @@ public class Match {
             System.out.println(awayTeam.getName() + " scores after " + minutes + " minutes!");
         } else if (minutes == 45) {
             System.out.println("The referee blows for half-time!");
+        } else if (randNum < 60) {
+            homeFouls++;
+        } else if (randNum < 110) {
+            awayFouls++;
         }
     }
 }
