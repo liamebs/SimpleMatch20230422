@@ -18,7 +18,7 @@ public class Match {
         }
 
         // indicate the match is over
-        System.out.println("The match is over!");
+        System.out.println("The referee blows the whistle for full-time!");
 
         // output the final score
         System.out.println(homeTeam.getName() + " " + homeTeam.getGoalsScored() + " - " + awayTeam.getGoalsScored() + " " + awayTeam.getName());
@@ -47,6 +47,8 @@ public class Match {
         } else if (randNum < 10) {
             awayTeam.scoreGoal();
             System.out.println(awayTeam.getName() + " scores after " + minutes + " minutes!");
+        } else if (minutes == 45) {
+            System.out.println("The referee blows for half-time!");
         }
     }
 }
