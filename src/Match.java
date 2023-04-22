@@ -4,8 +4,6 @@ public class Match {
     static Team homeTeam = new Team("Manchester United");
     static Team awayTeam = new Team("Arsenal");
     static int minutes;
-    static int homeFouls;
-    static int awayFouls;
 
     // method that simulates the match
     public static void play() {
@@ -23,7 +21,7 @@ public class Match {
         System.out.println("The referee blows the whistle for full-time!");
 
         // output the final score
-        System.out.println(homeTeam.getName() + " " + homeTeam.getGoalsScored() + " - " + awayTeam.getGoalsScored() + " " + awayTeam.getName());
+        System.out.println("Final score: " + homeTeam.getName() + " " + homeTeam.getGoalsScored() + " - " + awayTeam.getGoalsScored() + " " + awayTeam.getName());
 
         // determine match outcome
         if (homeTeam.getGoalsScored() > awayTeam.getGoalsScored()) {
@@ -35,8 +33,8 @@ public class Match {
         }
 
         // print foul count
-        System.out.println("Total fouls by " + homeTeam.getName() + ": " + homeFouls);
-        System.out.println("Total fouls by " + awayTeam.getName() + ": " + awayFouls);
+        System.out.println("Total fouls by " + homeTeam.getName() + ": " + homeTeam.getFoulCount());
+        System.out.println("Total fouls by " + awayTeam.getName() + ": " + awayTeam.getFoulCount());
     }
 
     // method simulating an action during the match
@@ -56,9 +54,9 @@ public class Match {
         } else if (minutes == 45) {
             System.out.println("The referee blows for half-time!");
         } else if (randNum < 60) {
-            homeFouls++;
+            homeTeam.commitFoul();
         } else if (randNum < 110) {
-            awayFouls++;
+            awayTeam.commitFoul();
         }
     }
 }
