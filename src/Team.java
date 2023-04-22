@@ -1,6 +1,6 @@
 public class Team {
     // fields to store the team name and number of goals scored
-    private String name;
+    private final String name;
     private int goalsScored;
 
     /* constructor that takes in the name of the team

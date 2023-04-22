@@ -3,6 +3,7 @@ public class Match {
     // initialise two teams playing in the match
     static Team homeTeam = new Team("Manchester United");
     static Team awayTeam = new Team("Arsenal");
+    static int minutes;
 
     // method that simulates the match
     public static void play() {
@@ -10,10 +11,9 @@ public class Match {
         System.out.println("The match has started!");
 
         // Simulate the match for 90 minutes
-        int minutes = 0;
         while (minutes < 90) {
             // Simulate an action during the match, e.g., player shooting or tackling
-            simulateAction();
+            simulateAction(minutes);
             minutes++;
         }
 
@@ -34,7 +34,7 @@ public class Match {
     }
 
     // method simulating an action during the match
-    private static void simulateAction() {
+    private static void simulateAction(int minutes) {
         /* simulate some action such as a player
         passing, shooting or tackling.  This can be random or
         based on an algorithm.
@@ -43,10 +43,10 @@ public class Match {
         int randNum = (int) (Math.random() * 300);
         if (randNum < 5) {
             homeTeam.scoreGoal();
-            System.out.println(homeTeam.getName() + " scores!");
+            System.out.println(homeTeam.getName() + " scores after " + minutes + " minutes!");
         } else if (randNum < 10) {
             awayTeam.scoreGoal();
-            System.out.println(awayTeam.getName() + " scores!");
+            System.out.println(awayTeam.getName() + " scores after " + minutes + " minutes!");
         }
     }
 }
