@@ -1,20 +1,46 @@
-public class Main {
-    public static void main(String[] args) {
-        Player[] players = new Player[2];
-        players[0] = new Player("Marcus", "Rashford", "Forward", "England",
-                "Right", 180, 25);
-        players[1] = new Player("Cody", "Gakpo", "Forward", "Netherlands",
-                "Right", 193, 23);
+import java.io.*;
 
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+
+        Player[] players = new Player[3];
+        for (int i = 0; i < players.length; i++)
+        {
+        // using BufferedReader and FileReader to parse player-data file and create player array
+            BufferedReader reader = new BufferedReader(new FileReader("/home/dolahillsimon/IdeaProjects/MyProjects/Football/Simple Match 20230422/src/player-info.txt"));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                // split txt file line into different player elements
+                String[] parts = line.split(",");
+                String firstName = parts[0].toUpperCase();
+                String lastName = parts[1].toUpperCase();
+                String position = parts[2].toUpperCase();
+                String nationality = parts[3].toUpperCase();
+                String preferredFoot = parts[4].toUpperCase();
+                int height = Integer.parseInt(parts[5]);
+                int age = Integer.parseInt(parts[6]);
+                Player newPlayer = new Player(firstName, lastName, position, nationality,
+                        preferredFoot, height, age);
+                players[i] = newPlayer;
+                i++;
+
+        }
         for (int j = 0; j < players.length; j++) {
             System.out.println(players[j].getFirstName() + " " + players[j].getLastName());
             System.out.println(players[j].getPosition());
             System.out.println(players[j].getNationality());
-            System.out.println("Preferred foot: " + players[j].getPreferredFoot());
-            System.out.println("Height: " + players[j].getHeight() +"cm");
-            System.out.println("Age: " + players[j].getAge());
+            System.out.println("PREFERRED FOOT: " + players[j].getPreferredFoot());
+            System.out.println("HEIGHT: " + players[j].getHeight() + "CM");
+            System.out.println("AGE: " + players[j].getAge());
             System.out.println();
         }
+
+        }
+
+
+
 
 
 
