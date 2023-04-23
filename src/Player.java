@@ -1,11 +1,11 @@
 public class Player {
-    private String firstName;
-    private String lastName;
-    private String position;
-    private String nationality;
-    private String preferredFoot;
-    private int height;
-    private int age;
+    private final String firstName;
+    private final String lastName;
+    private final String position;
+    private final String nationality;
+    private final String preferredFoot;
+    private final int height;
+    private final int age;
 
     // create constructor for Player class and initialise instance variables
     public Player(String firstName, String lastName, String position,

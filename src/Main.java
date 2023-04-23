@@ -1,5 +1,13 @@
 public class Main {
     public static void main(String[] args) {
+        Player[] players = new Player[2];
+        players[0] = new Player("Marcus", "Rashford", "Forward", "England",
+                "Right", 180, 25);
+        players[1] = new Player("Cody", "Gakpo", "Forward", "Netherlands",
+                "Right", 193, 23);
+
+
+
         Match.play();
 
 
