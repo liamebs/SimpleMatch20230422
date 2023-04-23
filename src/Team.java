@@ -11,17 +11,17 @@ public class Team {
         this.goalsScored = 0;
     }
 
-    // method to get the name of the team
+    // getter method to get the name of the team
     public String getName() {
         return name;
     }
 
-    // method to get the number of goals scored by the team
+    // getter method to get the number of goals scored by the team
     public int getGoalsScored() {
         return goalsScored;
     }
 
-    // method to increment the number of goals scored by the team by 1
+    // setter method to increment the number of goals scored by the team by 1
     public void scoreGoal() {
         goalsScored++;
     }

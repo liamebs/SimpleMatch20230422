@@ -19,6 +19,34 @@ public class Player {
         this.age = age;
     }
 
+    // getter methods
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public String getPreferredFoot() {
+        return preferredFoot;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getAge() {
+        return age;
+    }
 
 
 
