@@ -29,7 +29,7 @@ public class PlayerManager {
             System.out.println(player.getFirstName().toUpperCase() + " " + player.getLastName().toUpperCase());
             System.out.println(player.getPosition().toUpperCase());
             System.out.println(player.getNationality().toUpperCase());
-            System.out.println("PREFERRED FOOT: " + player.getPreferredFoot());
+            System.out.println("PREFERRED FOOT: " + player.getPreferredFoot().toUpperCase());
             System.out.println("HEIGHT: " + player.getHeight() + "CM");
             System.out.println("AGE: " + player.getAge());
             System.out.println();

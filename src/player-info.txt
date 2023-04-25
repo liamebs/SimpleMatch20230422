@@ -1,3 +1,4 @@
 marcus,rashford,forward,england,right,180,25
 cody,gakpo,forward,netherlands,right,193,23
 david,de gea,goalkeeper,spain,right,193,31
+simon,ebsworth,forward,england,right,199,48
