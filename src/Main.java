@@ -17,14 +17,14 @@ public class Main {
 
     // Method to read data from a file and return it as an array of strings
     public static String[] readDataFromFile(String fileName) throws IOException {
-        String [] data = null; // Initialise the data array as null
+        String[] data; // Initialise an empty data array
         // Create a BufferedReader to read from the file
         BufferedReader reader = new BufferedReader(new FileReader(fileName));
-        String line; // Variable to store each line of data read from the file
-        int numLines = 0; // Variaable to count the number of lines
+        int numLines = 0; // Variable to count the number of lines
 
+        // Array needs a length so a count of the number of entries is needed;
         // Count the number of lines in the file
-        while ((line = reader.readLine()) != null) {
+        while (reader.readLine() != null) {
             numLines++;
         }
 
